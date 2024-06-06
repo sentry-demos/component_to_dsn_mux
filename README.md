@@ -36,6 +36,9 @@ Create a configuration file in JSON format to map components to their respective
 Run the proxy with the following command:
 ./sentry-relay-proxy <defaultDSN> <configFilePath> <numberOfGoWorkers>
 
+## Diagram
+
+
 Example
 ./sentry-relay-proxy https://defaultPublicKey@o0.ingest.sentry.io/0 ./config.json 15
 
