@@ -48,9 +48,15 @@ This starts the server on port 8080. The server listens for incoming requests an
 In your app, initialize Sentry with poiting the DSN to the proxy server.
 
 You will need to substitute your org ingest url with the address of the proxy server, example:
-Let's say you are runnning this proxy server on www.yourserveraddress.com:8080
-and the DSN of your main project is: https://b299354f889d530fcc62f4c464b44a35@o0.ingest.sentry.io/4507374994653185
-The DSN that you will be pointing to is: https://b299354f889d530fcc62f4c464b44a35@www.yourserveraddress.com:8080/4507374994653185
+Let's say you are runnning this proxy server on ```www.yourserveraddress.com:8080```
+and the DSN of your main project is: 
+```
+https://b299354f889d530fcc62f4c464b44a35@o0.ingest.sentry.io/4507374994653185
+```
+The DSN that you will be pointing to is: 
+```
+https://b299354f889d530fcc62f4c464b44a35@www.yourserveraddress.com:8080/4507374994653185
+```
 
 Example:
 ```
