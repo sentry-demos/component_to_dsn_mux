@@ -14,10 +14,9 @@ This server allows you to route events from one codebase to multiple Sentry proj
  - Javascript
  - Electron
 
-## Usage
-
-
 ## Configuration
+
+Inside your app, use Sentry.setTag('sentry_relay_component', {component_name}) in places/scenarios where you would like the error event to be routed to a specifc project.
 
 Create a configuration file in JSON format to map components to their respective DSNs. For example, `config.json`:
 
@@ -32,7 +31,7 @@ Create a configuration file in JSON format to map components to their respective
 
 ## Run
 The main function should be provided with 3 arguments:
-1) defaultDSN - The DSN of your main/default project where the events are going to be sent to in case that component name is not specified or has no mapping in the config file.
+1) defaultDSN - The DSN of your main/default project where the events will be sent to in cases where `sentry_relay_component` is not specified or has no mapping in the config file.
 2) ConfigFilePath - A file that contains a JSON object that contains mapping from component name to DSN
 3) numberOfGoWorkers - This argument is set in order to support concurency, each go worker will handle X goroutines, each goroutine will process one event.
 
@@ -47,6 +46,12 @@ go run main http://efe273e1f9aae6f6f0bc4fb089fab1d7@o0.ingest.sentry/45072683038
 This starts the server on port 8080. The server listens for incoming requests and forwards them based on the component tags defined in the configuration file.
 
 In your app, initialize Sentry with poiting the DSN to the proxy server.
+
+You will need to substitute your org ingest url with the address of the proxy server, example:
+Let's say you are runnning this proxy server on www.yourserveraddress.com:8080
+and the DSN of your main project is: https://b299354f889d530fcc62f4c464b44a35@o0.ingest.sentry.io/4507374994653185
+The DSN that you will be pointing to is: https://b299354f889d530fcc62f4c464b44a35@www.yourserveraddress.com:8080/4507374994653185
+
 Example:
 ```
 Sentry.init({
