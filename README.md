@@ -46,7 +46,13 @@ go run main http://efe273e1f9aae6f6f0bc4fb089fab1d7@o0.ingest.sentry/45072683038
 ```
 This starts the server on port 8080. The server listens for incoming requests and forwards them based on the component tags defined in the configuration file.
 
-Point 
+In your app, initialize Sentry with poiting the DSN to the proxy server.
+Example:
+```
+Sentry.init({
+  dsn: 'https://b299354f889d530fcc62f4c464b44a35@www.yourserveraddress.com:8080/4507374994653185'
+});
+```
 
 ## Diagram
 ![Screenshot 2024-06-05 at 9 32 47 PM](https://github.com/sentry-demos/component_to_dsn_mux/assets/89414234/24b734ca-b77c-4f8f-a7cb-f534eccf0c9e)
