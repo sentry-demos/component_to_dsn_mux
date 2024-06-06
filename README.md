@@ -33,8 +33,8 @@ Create a configuration file in JSON format to map components to their respective
 ## Run
 The main function should be provided with 3 arguments:
 1) defaultDSN - The DSN of your main/default project where the events are going to be sent to in case that component name is not specified or has no mapping in the config file.
-2) ConfigFilePath - A JSON object that contains mapping from component name to DSN
-3) numberOfGoWorkers - This argument is set in order to support concurency, each go worker will handle X goroutines
+2) ConfigFilePath - A file that contains a JSON object that contains mapping from component name to DSN
+3) numberOfGoWorkers - This argument is set in order to support concurency, each go worker will handle X goroutines, each goroutine will process one event.
 
 Run the proxy with the following command:
 ```
