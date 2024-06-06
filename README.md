@@ -1,5 +1,5 @@
 # Component to DSN Multiplexer
-### IMPORTANT NOTE: This is a code sample, not a supported product, use at your own risk.
+### IMPORTANT NOTE: This is a code sample, NOT a supported product, use at your own risk.
 
 ## Description
 
