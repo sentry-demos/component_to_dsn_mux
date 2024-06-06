@@ -14,43 +14,10 @@ This server allows you to route events from one codebase to multiple Sentry proj
  - Javascript
  - Electron
 
-## Introduction
+## Usage
 
 The Sentry Relay Proxy is designed to forward incoming HTTP requests to different Sentry projects based on a configuration file. This enables dynamic routing and load balancing of Sentry events.
 
-## Features
-
-- Validate and forward Sentry requests.
-- Dynamic DSN mapping based on component tags.
-- Periodic configuration reload.
-- Support for compressed request bodies.
-
-## Prerequisites
-
-Ensure you have the following installed:
-
-- [Go](https://golang.org/doc/install) (version 1.16 or later)
-- [Git](https://git-scm.com/)
-
-## Installation
-
-1. **Clone the repository:**
-
-    ```sh
-    git clone https://github.com/yuval-sentry/hello.git
-    ```
-
-2. **Navigate to the project directory:**
-
-    ```sh
-    cd hello
-    ```
-
-3. **Build the project:**
-
-    ```sh
-    go build -o sentry-relay-proxy
-    ```
 
 ## Configuration
 
