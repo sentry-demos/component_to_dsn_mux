@@ -26,8 +26,8 @@ Create a configuration file in JSON format to map components to their respective
 ```json
 {
     "mapping": {
-        "componentA": "https://examplePublicKey@o0.ingest.sentry.io/0",
-        "componentB": "https://examplePublicKey@o0.ingest.sentry.io/1"
+        "A": "https://examplePublicKey1@o0.ingest.sentry.io/1",
+        "B": "https://examplePublicKey2@o0.ingest.sentry.io/2"
     }
 }
 ```
