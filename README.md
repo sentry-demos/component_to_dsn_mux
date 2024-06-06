@@ -35,11 +35,10 @@ Create a configuration file in JSON format to map components to their respective
 ## Usage
 Run the proxy with the following command:
 ./sentry-relay-proxy <defaultDSN> <configFilePath> <numberOfGoWorkers>
+This starts the server on port 8080. The server listens for incoming requests and forwards them based on the component tags defined in the configuration file.
 
 ## Diagram
 
 
-Example
-./sentry-relay-proxy https://defaultPublicKey@o0.ingest.sentry.io/0 ./config.json 15
 
-This starts the server on port 8080. The server listens for incoming requests and forwards them based on the component tags defined in the configuration file.
+
