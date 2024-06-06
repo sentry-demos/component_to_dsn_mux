@@ -32,9 +32,11 @@ Create a configuration file in JSON format to map components to their respective
 }
 ```
 
-## Usage
+## Run
 Run the proxy with the following command:
-./sentry-relay-proxy <defaultDSN> <configFilePath> <numberOfGoWorkers>
+`go run main <defaultDSN> <configFilePath> <numberOfGoWorkers>`
+Example:
+`go run main http://efe273e1f9aae6f6f0bc4fb089fab1d7@a2f9-73-158-188-16.ngrok-free.app/4507268303880192 config.json 20`
 This starts the server on port 8080. The server listens for incoming requests and forwards them based on the component tags defined in the configuration file.
 
 ## Diagram
