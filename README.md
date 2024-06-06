@@ -2,6 +2,9 @@
 ### IMPORTANT NOTE: This is a code sample, NOT a supported product, use at your own risk.
 
 ## Description
+A self hosted proxy server written in Golang that serves as a middleware between your app and Sentry.
+This server allows you to route events from one codebase to multiple Sentry projects using a custom tag name called `sentry_relay_component`
+
 
 ## Table of Contents
 
