@@ -15,9 +15,7 @@ This server allows you to route events from one codebase to multiple Sentry proj
  - Electron
 
 ## Usage
-
-The Sentry Relay Proxy is designed to forward incoming HTTP requests to different Sentry projects based on a configuration file. This enables dynamic routing and load balancing of Sentry events.
-
+// TODO 
 
 ## Configuration
 
