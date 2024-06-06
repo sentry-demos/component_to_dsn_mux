@@ -15,7 +15,7 @@ This server allows you to route events from one codebase to multiple Sentry proj
  - Electron
 
 ## Usage
-// TODO 
+
 
 ## Configuration
 
@@ -31,10 +31,19 @@ Create a configuration file in JSON format to map components to their respective
 ```
 
 ## Run
+The main function should be provided with 3 arguments:
+1) defaultDSN - The DSN of your main/default project where the events are going to be sent to in case that component name is not specified or has no mapping in the config file.
+2) ConfigFilePath - A JSON object that contains mapping from component name to DSN
+3) numberOfGoWorkers - This argument is set in order to support concurency, each go worker will handle X goroutines
+
 Run the proxy with the following command:
-`go run main <defaultDSN> <configFilePath> <numberOfGoWorkers>`
+```
+go run main <defaultDSN> <configFilePath> <numberOfGoWorkers>
+```
 Example:
-`go run main http://efe273e1f9aae6f6f0bc4fb089fab1d7@a2f9-73-158-188-16.ngrok-free.app/4507268303880192 config.json 20`
+```
+go run main http://efe273e1f9aae6f6f0bc4fb089fab1d7@localhost:8080/4507268303880192 config.json 20
+```
 This starts the server on port 8080. The server listens for incoming requests and forwards them based on the component tags defined in the configuration file.
 
 ## Diagram
