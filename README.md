@@ -32,7 +32,7 @@ Create a configuration file in JSON format to map components to their respective
 ## Run
 The main function should be provided with 3 arguments:
 1) defaultDSN - The DSN of your main/default project where the events will be sent to in cases where `sentry_relay_component` is not specified or has no mapping in the config file.
-2) ConfigFilePath - A file that contains a JSON object that contains mapping from component name to DSN
+2) ConfigFilePath - A path to a file that contains a JSON object that contains mapping from component name to DSN
 3) numberOfGoWorkers - This argument is set in order to support concurency, each go worker will handle X goroutines, each goroutine will process one event.
 
 Run the proxy with the following command:
@@ -45,7 +45,7 @@ go run main http://b299354f889d530fcc62f4c464b44a35@o0.ingest.sentry/45073749946
 ```
 This starts the server on port 8080. The server listens for incoming requests and forwards them based on the component tags defined in the configuration file.
 
-In your app, initialize Sentry with poiting the DSN to the proxy server.
+In your app, initialize Sentry with pointing the DSN to the proxy server.
 
 You will need to substitute your org ingest url with the address of the proxy server.
 
