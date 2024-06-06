@@ -1,6 +1,7 @@
-# Sentry Tag Name To DSN Multiplexer
+# Component to DSN Multiplexer
+### IMPORTANT NOTE: This is a code sample, not a supported product, use at your own risk.
 
-This repository contains a Sentry Relay Proxy written in Go. The proxy forwards requests to Sentry, dynamically routing them based on the specified component tags.
+## Description
 
 ## Table of Contents
 
