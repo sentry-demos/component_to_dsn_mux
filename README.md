@@ -3,7 +3,7 @@
 
 ## Description
 A self hosted proxy server written in Golang that serves as a middleware between your app and Sentry.
-This server allows you to route events from one codebase to multiple Sentry projects using a custom tag name called `sentry_relay_component`
+This server allows you to route error events and minidumps from one codebase to multiple Sentry projects using a custom tag name called `sentry_relay_component`
 
 ## Supported Datamodels
 - Errors
@@ -41,14 +41,15 @@ go run main <defaultDSN> <configFilePath> <numberOfGoWorkers>
 ```
 Example:
 ```
-go run main http://efe273e1f9aae6f6f0bc4fb089fab1d7@o0.ingest.sentry/4507268303880192 config.json 20
+go run main http://b299354f889d530fcc62f4c464b44a35@o0.ingest.sentry/4507374994653185 config.json 20
 ```
 This starts the server on port 8080. The server listens for incoming requests and forwards them based on the component tags defined in the configuration file.
 
 In your app, initialize Sentry with poiting the DSN to the proxy server.
 
 You will need to substitute your org ingest url with the address of the proxy server.
-Example:
+
+### Example:
 Let's say you are runnning this proxy server on: 
 ```
 www.yourserveraddress.com:8080
