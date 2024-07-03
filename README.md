@@ -3,7 +3,7 @@
 
 ## Description
 A self hosted proxy server written in Golang that serves as a middleware between your app and Sentry.
-This server allows you to route error events and minidumps from one codebase to multiple Sentry projects using a custom tag name called `sentry_relay_component`
+This server allows you to route error events and minidumps from one codebase to multiple Sentry projects using a custom tag called `sentry_relay_component`
 
 ## Supported Datamodels
 - Errors
@@ -23,8 +23,8 @@ Create a configuration file in JSON format to map components to their respective
 ```json
 {
     "mapping": {
-        "A": "https://examplePublicKey1@o0.ingest.sentry.io/1",
-        "B": "https://examplePublicKey2@o0.ingest.sentry.io/2"
+        "componentA": "https://examplePublicKey1@o0.ingest.sentry.io/1",
+        "componentB": "https://examplePublicKey2@o0.ingest.sentry.io/2"
     }
 }
 ```
