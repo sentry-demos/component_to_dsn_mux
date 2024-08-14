@@ -23,8 +23,8 @@ Create a configuration file in JSON format to map components to their respective
 ```json
 {
     "mapping": {
-        "A": "https://projectAPublicKey1@o0.ingest.sentry.io/1",
-        "B": "https://projectBPublicKey2@o0.ingest.sentry.io/2"
+        "A": "https://publicKey1@o0.ingest.sentry.io/1",
+        "B": "https://publicKey2@o0.ingest.sentry.io/2"
     }
 }
 ```
